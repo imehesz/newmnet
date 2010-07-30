@@ -36,7 +36,7 @@ return array(
 		),
 		*/
 		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/newmnet.db',
 		),
 		// uncomment the following to use a MySQL database
 		/*

@@ -97,7 +97,7 @@ class SiteController extends Controller
         Yii::import( 'ext.simplepie.simplepie' );
 
         $feed = new simplepie();
-        $feed->cache = false;
+        // $feed->cache = false;
 	    $feed->set_feed_url( 'http://yiiradiio.mehesz.net/feed' );
         $feed->init();
 		foreach($feed->get_items() as $item)
