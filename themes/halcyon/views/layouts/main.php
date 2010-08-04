@@ -32,8 +32,7 @@
 	<div id="body" class="clear">
 		<div id="sidebar" class="column-left">
 			<ul>	
-                <?php $this->beginWidget( 'ext.feedwidget.FeedWidget', array( 'feed' => 'Yii Radiio', 'limit' => 1 ) ); ?>
-                <?php $this->endWidget(); ?>                
+                <?php $this->widget( 'ext.newsblockwidget' ); ?>
 				<li>
 					<h4>Links</h4>
 	
