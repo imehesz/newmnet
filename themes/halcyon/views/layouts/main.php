@@ -32,6 +32,7 @@
 	<div id="body" class="clear">
 		<div id="sidebar" class="column-left">
 			<ul>	
+                <?php $this->widget( 'ext.facewidget.facewidget' ); ?>
                 <?php $this->widget( 'ext.newsblockwidget' ); ?>
 				<li>
 					<h4>Links</h4>
