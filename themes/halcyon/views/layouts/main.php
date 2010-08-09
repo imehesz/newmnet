@@ -8,15 +8,17 @@
 </head>
 <body>
 <div id="wrapper">
-
 	<div id="top" class="clear">
-		<h1><a href="<?php echo Yii::app()->request->baseUrl; ?>">mehesz<span id="" class="" style="color:#a11;">.</span>net</a></h1>
+		<h1>
+        <div style="font-size:12px;"><?php echo Yii::app()->params['slogan']; ?></div>
+        <div><a href="<?php echo Yii::app()->request->baseUrl; ?>">mehesz<span id="" class="" style="color:#a11;">.</span>net</a></div>
+        </h1>
 	    <?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'Blog', 'url'=>array('/blog/index')),
 				array('label'=>'Stuff', 'url'=>array('/stuff/index')),
-				array('label'=>'Podcast', 'url'=>array('/podcast/index')),
+				array('label'=>'Podcast', 'url'=> 'http://yiiradiio.mehesz.net'),
 				array('label'=>'Linux', 'url'=>array('/linux/index')),
 				// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
@@ -31,9 +33,20 @@
 	
 	<div id="body" class="clear">
 		<div id="sidebar" class="column-left">
-			<ul>	
+			<ul>
+<?php
+    /*
+    Yii::app()->controller->widget('application.extensions.VGGravatarWidget.VGGravatarWidget', 
+        array( 'email'  => 'imehesz@gmail.com',
+               'hashed' => false,
+               'default' => 'http://www.mysite.com/default_gravatar_image.jpg', 
+               'size' => 150,
+               'rating' => 'PG', 'htmlOptions' => array( 'alt' => 'Gravatar Icon' )));
+    */
+?>
                 <?php $this->widget( 'ext.facewidget.facewidget' ); ?>
                 <?php $this->widget( 'ext.newsblockwidget' ); ?>
+                <?php /*
 				<li>
 					<h4>Links</h4>
 	
@@ -68,6 +81,7 @@
 	
 					</ul>
 				</li>
+                */ ?>
 	
 			</ul>
 		</div>
@@ -106,14 +120,14 @@
 	
 	<div id="footer" class="clear">
 		<div class="footer-box">
-			<h4>About our site</h4>
+			<h4>Latest Shout</h4>
 			<p>
 				Morbi fermentum, nunc id pellentesque blandit, lectus velit pellentesque nisl, a condimentum est velit sed nisi. Sed libero velit, eleifend nec porttitor a, porta quis leo. In hac habitasse platea dictumst. 
 			</p>
 		</div>
 		
 		<div class="footer-box">
-			<h4>Categories</h4>
+			<h4>Social Me</h4>
 			<ul>
 			  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
 			  <li><a href="#">Quisque consequat nunc a felis.</a></li>
