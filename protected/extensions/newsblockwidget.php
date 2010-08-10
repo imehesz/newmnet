@@ -16,7 +16,7 @@ class NewsBlockWidget extends CWidget
             Yii::import( 'ext.simplepie.simplepie' );
             $realfeed = new simplepie();
 
-            $output = '<li><h4>News</h4>';
+            $output = '<li><h4>Top News</h4>';
             $output .= '<ul>';
 
             foreach( $feeds as $feed )

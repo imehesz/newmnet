@@ -16,11 +16,12 @@
 	    <?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Blog', 'url'=>array('/blog/index')),
+				array('label'=>'Blog', 'url'=> 'http://mehesznet.blogspot.com' ),
 				array('label'=>'Stuff', 'url'=>array('/stuff/index')),
 				array('label'=>'Podcast', 'url'=> 'http://yiiradiio.mehesz.net'),
 				array('label'=>'Linux', 'url'=>array('/linux/index')),
 				// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'News', 'url'=>array('/site/page', 'view'=>'news')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
                 /*                
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
