@@ -34,3 +34,8 @@
      *
      */
     defined( 'MEHESZ_FILES_FOLDER' ) or define( 'MEHESZ_FILES_FOLDER', '/path/to/the/file/folder/' );
+
+	/**
+	 *
+	 */
+	defined( 'MEHESZ_CACHE_FOLDER' ) or define( 'MEHESZ_CACHE_FOLDER', '/path/to/cache/folder' );

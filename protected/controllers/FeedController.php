@@ -59,7 +59,7 @@ class FeedController extends Controller
 	{
 		$model=new Feed;
 
-        $model->weight = $model->weight ? $model->weight : 0;
+        $model->weight = 10;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

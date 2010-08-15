@@ -10,7 +10,8 @@ class NewsBlockWidget extends CWidget
         // this method is called by CController::beginWidget()
         // let's load some feeds ...
         // $feeds = Feed::model()->findAllByAttributes( array( 'deleted' => 0 ) );
-        $feeds = Feed::model()->findAll();
+		$output = '';
+        $feeds = Feed::model()->findAll( array( 'order' => 'weight' ) );
         if( sizeof( $feeds ) )
         {
             Yii::import( 'ext.simplepie.simplepie' );
