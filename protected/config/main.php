@@ -36,7 +36,7 @@ return array(
 		),
 		*/
 		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/newmnet.db',
+			'connectionString' => MEHESZ_DB_CONNECTION_STRING,
 		),
 		// uncomment the following to use a MySQL database
 		/*
@@ -76,4 +76,11 @@ return array(
 	),
 
     'theme' => 'halcyon',
+
+    'modules'=>array(
+        'gii'=>array(
+            'class'=>'system.gii.GiiModule',
+            'password'=>'1cf1341e094bf98fb92b6f5decbc21de',
+        ),
+    ),
 );
