@@ -2,11 +2,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>halcyon - a free web template</title>
+<title>mehesz.net - making the web. better.</title>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl;?>/css/styles.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl;?>/css/form.css" />
+<script language="javascript">
+    $(document).ready(function(){
+        var userUpdates = function()
+        {
+            $('#dwitter_user').fadeOut();
+            $('#dwitter_user').html('');
+
+            $("#dwitter_user").tweet({
+                username: "imehesz",
+                join_text: "auto",
+                avatar_size: 0,
+                count: 2,
+                auto_join_text_default: "", 
+                auto_join_text_ed: "",
+                auto_join_text_ing: "",
+                auto_join_text_reply: "replied to",
+                auto_join_text_url: "",
+                loading_text: "loading tweets..."
+            });
+            $('#dwitter_user').fadeIn();
+        }
+        userUpdates();
+    });
+</script>
 </head>
 <body>
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/jquery.tweet.js'); ?>
 <div id="wrapper">
 	<div id="top" class="clear">
 		<h1>
@@ -19,7 +45,7 @@
 				array('label'=>'Blog', 'url'=> 'http://mehesznet.blogspot.com' ),
 				array('label'=>'Stuff', 'url'=>array('/stuff/index')),
 				array('label'=>'Podcast', 'url'=> 'http://yiiradiio.mehesz.net'),
-				array('label'=>'Linux', 'url'=>array('/linux/index')),
+				//array('label'=>'Linux', 'url'=>array('/linux/index')),
 				// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'News', 'url'=>array('/site/page', 'view'=>'news')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
@@ -121,31 +147,67 @@
 	
 	<div id="footer" class="clear">
 		<div class="footer-box">
-			<h4>Latest Shout</h4>
-			<p>
-				Morbi fermentum, nunc id pellentesque blandit, lectus velit pellentesque nisl, a condimentum est velit sed nisi. Sed libero velit, eleifend nec porttitor a, porta quis leo. In hac habitasse platea dictumst. 
-			</p>
+			<h4>Latest Shouts</h4>
+			<div id="dwitter_user"></div>
 		</div>
 		
 		<div class="footer-box">
 			<h4>Social Me</h4>
 			<ul>
-			  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-			  <li><a href="#">Quisque consequat nunc a felis.</a></li>
-			  <li><a href="#">Suspendisse consequat magna at.</a></li>
-			  <li><a href="#">Etiam eget diam id ligula rhoncus.</a></li>
-			  <li><a href="#">Sed in mauris non nibh.</a></li>
+			  	<li>
+					<a href="http://twitter.com/imehesz" target="_blank">
+						<div class="float-left"><img border="0" src="<?php echo Yii::app()->request->baseUrl;?>/images/twitter_icon.png"></div>
+						<div class="float-left social-label">twitter</div>
+						<div style="clear:both;"></div>
+					</a>
+				</li>
+			  	<li>
+					<a href="http://www.linkedin.com/pub/imre-mehesz/8/227/89" target="_blank">
+						<div class="float-left"><img border="0" src="<?php echo Yii::app()->request->baseUrl;?>/images/linkedin_icon.png"></div>
+						<div class="float-left social-label">linked-in</div>
+						<div style="clear:both;"></div>
+					</a>
+				</li>
+			  	<li>
+					<a href="http://github.com/imehesz" target="_blank">
+						<div class="float-left"><img border="0" src="<?php echo Yii::app()->request->baseUrl;?>/images/github_icon.png"></div>
+						<div class="float-left social-label">github repos</div>
+						<div style="clear:both;"></div>
+					</a>
+				</li>
+			  	<li>
+					<a href="http://imehesz.mp" target="_blank">
+						<div class="float-left"><img border="0" src="<?php echo Yii::app()->request->baseUrl;?>/images/chimp_icon.png"></div>
+						<div class="float-left social-label">chi.mp</div>
+						<div style="clear:both;"></div>
+					</a>
+				</li>
 			</ul>
 		</div>
 		
 		<div class="footer-box">
-			<h4>Network sites</h4>
+			<h4>Others</h4>
 			<ul>
-				<li><a href="http://www.spyka.net" title="spyka Webmaster resources">spyka webmaster</a></li>
-				<li><a href="http://www.justfreetemplates.com" title="free web templates">Free web templates</a></li>
-				<li><a href="http://www.spyka.net/forums" title="webmaster forums">Webmaster forums</a></li>
-				<li><a href="http://www.awesomestyles.com/mybb-themes" title="mybb themes">MyBB themes</a></li>
-				<li><a href="http://www.awesomestyles.com" title="free phpbb3 themes">phpBB3 styles</a></li>
+				<?php 
+					$extlinks = Extlink::model()->findAll( array( 'order' => 'weight' ) ); 
+					if( $extlinks ):
+				?>
+						<?php foreach( $extlinks as $link ): ?>
+							<li>
+							<?php 
+								echo 
+									CHtml::link( 
+										$link->label, 
+										$link->url,
+										array( 
+											'title' 	=> $link->label,
+											'target'	=> '_blank'
+										) 
+									); 
+							?>
+							</li>
+						<?php endforeach; ?>
+				<?php endif; ?>
 			</ul>	
 		</div>
 		

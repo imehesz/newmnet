@@ -331,3 +331,18 @@ div#footer-links a {
 .clear {
 	display: block;
 }
+
+.float-left
+{
+	float:left;
+}
+
+.social-label
+{
+	margin: 1px 5px;	
+}
+
+.tweet_time
+{
+	display:none;
+}
