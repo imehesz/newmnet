@@ -144,7 +144,7 @@
 			<br /><br /> */?>
 		</div>
 	</div>
-	
+	<div style="width:960px;text-align:center;height:23px;"><a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/top.jpg" border="0"/></a></div>
 	<div id="footer" class="clear">
 		<div class="footer-box">
 			<h4>Latest Shouts</h4>
@@ -184,7 +184,6 @@
 				</li>
 			</ul>
 		</div>
-		
 		<div class="footer-box">
 			<h4>Others</h4>
 			<ul>
