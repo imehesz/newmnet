@@ -31,13 +31,14 @@
 </script>
 </head>
 <body>
+<a name="top"></a>
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/jquery.tweet.js'); ?>
 <div id="wrapper">
 	<div id="top" class="clear">
 		<h1>
         <div style="font-size:12px;"><?php echo Yii::app()->params['slogan']; ?></div>
-        <div><a href="<?php echo Yii::app()->request->baseUrl; ?>">mehesz<span id="" class="" style="color:#a11;">.</span>net</a></div>
+        <div><a href="<?php echo Yii::app()->request->baseUrl; ?>/">mehesz<span id="" class="" style="color:#a11;">.</span>net</a></div>
         </h1>
 	    <?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
@@ -144,7 +145,7 @@
 			<br /><br /> */?>
 		</div>
 	</div>
-	<div style="width:960px;text-align:center;height:23px;"><a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/top.jpg" border="0"/></a></div>
+	<div style="width:960px;text-align:center;height:13px;"><a href="#top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/top.jpg" border="0"/></a></div>
 	<div id="footer" class="clear">
 		<div class="footer-box">
 			<h4>Latest Shouts</h4>
@@ -223,7 +224,7 @@
 	
 	<div id="footer-links">
 		<p>
-			&copy; <?php echo date( 'Y', time() ); ?> <a href="/">mehesz<span style='color:#f00;'>.</span>net</a>. Design by <a href="http://www.spyka.net">SyKa.net</a> 
+			&copy; <?php echo date( 'Y', time() ); ?> <a href="http://mehesz.net" target="_blank">mehesz<span style='color:#f00;'>.</span>net</a>. Design by <a href="http://www.spyka.net" target="_blank">SyKa.net</a> 
 		</p>
 	</div>
 </div>

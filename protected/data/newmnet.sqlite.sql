@@ -1,4 +1,5 @@
 BEGIN TRANSACTION;
 CREATE TABLE feeds (created NUMERIC, deleted NUMERIC, id INTEGER PRIMARY KEY, name VARCHAR(50), url TEXT, weight NUMERIC);
 CREATE  TABLE extlinks ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "url" TEXT, "label" VARCHAR, "weight" INTEGER DEFAULT 0);
+CREATE TABLE stuff (image VARCHAR(100), category VARCHAR(20), deleted INT, description TEXT, extlink VARCHAR(240), id INTEGER PRIMARY KEY, inblock INT, name VARCHAR(50), weight INT);
 COMMIT;
