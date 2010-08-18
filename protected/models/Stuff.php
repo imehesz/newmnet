@@ -14,6 +14,8 @@
  */
 class Stuff extends CActiveRecord
 {
+	public $image2;
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return Stuff the static model class
@@ -39,7 +41,8 @@ class Stuff extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            array( 'name', 'required' ),
+			array( 'image2', 'file', 'types' => 'jpg,gif,png', 'allowEmpty' => true ),
+            array( 'name,category', 'required' ),
 			array('deleted, inblock, weight', 'numerical', 'integerOnly'=>true),
 			array('extlink', 'length', 'max'=>240),
 			array('name', 'length', 'max'=>50),

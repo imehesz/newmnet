@@ -73,8 +73,18 @@ class StuffController extends Controller
 		if(isset($_POST['Stuff']))
 		{
 			$model->attributes=$_POST['Stuff'];
+
+			$model->image2=CUploadedFile::getInstance($model,'image2');
+			$ext = strtolower(substr(strrchr($model->image2->name, '.'), 1));
+
+			$filename = md5( rand( 0, time() ) ) . '.' . $ext;
+			$model->image = $filename;
+
 			if($model->save())
+			{
+				$model->image2->saveAs( MEHESZ_FILES_FOLDER . $filename );
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('create',array(

@@ -212,13 +212,37 @@
 		</div>
 		
 		<div class="footer-box end-footer-box">
-			<h4>Search our site</h4>
+			<h4>Random Stuff</h4>
+				<?php
+					$inblocks = Stuff::model()->findAll( 'inblock=1' );
+					
+					if( sizeof($inblocks) )
+					{
+						$stuff_arr = array();
+						foreach ($inblocks as $inblock)
+						{
+							$stuff_arr[] = $inblock->id;
+						}
+
+						$rand_stuff_id = $stuff_arr[ rand(0,sizeof($stuff_arr)-1) ];
+					}
+ 				?>
+				<?php if( $rand_stuff_id > 0 ) : ?>
+					<?php $rand_stuff = Stuff::model()->findByPk( $rand_stuff_id ); ?>
+					<div class="rand-stuff-title">
+						<img src="<?php echo Yii::app()->request->baseUrl . '/files/' . $rand_stuff->image; ?>" />
+					</div>
+				<?php else: ?>
+					didn't find stuff :/
+				<?php endif; ?>
+			<?php /*
 			<form action="#" method="get">
 				<p>
 					<input type="text" id="searchquery" size="18" name="searchterm" />
 					<input type="submit" id="searchbutton" value="Search" class="formbutton" />
 				</p>
 			</form>
+			*/?>
 		</div>
 	</div>
 	
