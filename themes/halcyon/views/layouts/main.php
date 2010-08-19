@@ -34,6 +34,8 @@
 <a name="top"></a>
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/jquery.tweet.js'); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/sliderbox.js'); ?>
+<?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/sliderbox.css'); ?>
 <div id="wrapper">
 	<div id="top" class="clear">
 		<h1>
@@ -229,9 +231,12 @@
  				?>
 				<?php if( $rand_stuff_id > 0 ) : ?>
 					<?php $rand_stuff = Stuff::model()->findByPk( $rand_stuff_id ); ?>
-					<div class="rand-stuff-title">
-						<?php /*<img src="<?php echo Yii::app()->request->baseUrl . '/files/' . $rand_stuff->image; ?>" /> */ ?>
+                    <div class="boxgrid slidedown">
 						<img src="<?php echo Yii::app()->image->createUrl( '200x150', MEHESZ_FILES_FOLDER . $rand_stuff->image ); ?>" />
+	                    <div class="cover boxcaption">
+                            <h3><?php echo $rand_stuff->name;?></h3>
+                            <p style="float:right;margin-right:10px;">in <?php echo $rand_stuff->category;?></p>
+                        </div>
 					</div>
 				<?php else: ?>
 					didn't find stuff :/

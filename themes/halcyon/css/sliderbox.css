@@ -1,0 +1,33 @@
+.boxgrid{
+	width: 200px;
+	height: 150px;
+	margin:10px;
+	float:left;
+	background:#161613;
+/*	border: solid 2px #8399AF; */
+	overflow: hidden;
+	position: relative;
+}
+.boxgrid img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+}
+
+.boxcaption{
+    padding: 5px;
+	float: left;
+	position: absolute;
+    top: 150px;
+	background: #000;
+	height: 150px;
+	width: 100%;
+	opacity: .9;
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+ 	}
+
+    
