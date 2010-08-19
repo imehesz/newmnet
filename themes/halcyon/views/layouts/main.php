@@ -230,7 +230,8 @@
 				<?php if( $rand_stuff_id > 0 ) : ?>
 					<?php $rand_stuff = Stuff::model()->findByPk( $rand_stuff_id ); ?>
 					<div class="rand-stuff-title">
-						<img src="<?php echo Yii::app()->request->baseUrl . '/files/' . $rand_stuff->image; ?>" />
+						<?php /*<img src="<?php echo Yii::app()->request->baseUrl . '/files/' . $rand_stuff->image; ?>" /> */ ?>
+						<img src="<?php echo Yii::app()->image->createUrl( '200x150', MEHESZ_FILES_FOLDER . $rand_stuff->image ); ?>" />
 					</div>
 				<?php else: ?>
 					didn't find stuff :/

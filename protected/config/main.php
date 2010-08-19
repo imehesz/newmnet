@@ -25,16 +25,15 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName' => false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
 		'db'=>array(
 			'connectionString' => MEHESZ_DB_CONNECTION_STRING,
 		),
@@ -64,6 +63,20 @@ return array(
 					'class'=>'CWebLogRoute',
 				),
 			),
+		),
+		'image'=>array(
+			'class'=>'ext.imageapi.CImage',
+			'presets'=>array(
+				'200x150'=>array(
+					'cacheIn'=> 'webroot.cache.200x150',
+					'actions'=>array(
+						'scaleAndCrop'=>array(
+							'width'=>200,    
+							'height'=>150
+						),
+					),
+				),
+			), 
 		),
 	),
 
