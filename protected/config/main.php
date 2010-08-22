@@ -76,6 +76,16 @@ return array(
 						),
 					),
 				),
+				'500x350'=>array(
+					'cacheIn'=> 'webroot.cache.500x350',
+					'actions'=>array(
+						'scaleAndCrop'=>array(
+							'width'=>500,    
+							'height'=>350
+						),
+					),
+				),
+
 			), 
 		),
 	),

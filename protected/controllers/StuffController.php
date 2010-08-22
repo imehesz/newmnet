@@ -137,13 +137,22 @@ class StuffController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+/*	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Stuff');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
+	}*/
+
+	public function actionIndex()
+	{
+		$stuffs = Stuff::model()->findAll();
+		$this->render('list',array(
+			'stuffs'=>$stuffs,
+		));
 	}
+
 
 	/**
 	 * Manages all models.
