@@ -23,49 +23,56 @@
  
 	<!-- first slide --> 
 	<div> 
-		<h3>First pane</h3> 
+		<h3>Agile Develpment</h3> 
  
-		<img src="http://static.flowplayer.org/img/title/screens.png" alt="Flying screens" style="float:left;margin:0 30px 20px 0" /> 
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/agile.jpg" alt="Flying screens" style="float:left;margin:0 30px 20px 0" width="150px" /> 
  
 		<p style="font-weight:bold"> 
-			Aenean nec imperdiet ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			Agile software development is a group of software development methodologies based on iterative and incremental development, where requirements and solutions evolve through collaboration between self-organizing, cross-functional teams.
 		</p> 
  
 		<p> 
-			Suspendisse potenti. Sed elementum risus eleifend massa vestibulum consectetur. Duis massa augue, aliquam eget fringilla vel, aliquam vitae arcu. Nam sed magna mi. Praesent odio neque, dapibus sit amet suscipit at, tempus sed nibh. Aliquam sagittis ligula in ligula faucibus cursus. Quisque vulputate pellentesque facilisis.
+			<a href="http://en.wikipedia.org/wiki/Agile_software_development" target="_blank">Click here</a> for more info on agile development.
 		</p>
 
-        <a href="">blaaaah</a>
- 
 	</div> 
  
 	<!-- second slide --> 
 	<div> 
-		<h3>Second pane</h3> 
+		<h3>Yii Framework</h3> 
  
- 
-		<img src="http://static.flowplayer.org/img/title/eye192.png" alt="Flying screens" style="float:left;margin:0 30px 20px 0" /> 
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/yii-logo.png" alt="Yii framework" title="Yii framework" style="float:left;margin:0 30px 20px 0" width="150px" /> 
  
 		<p style="font-weight:bold"> 
-			Consectetur adipiscing elit. Praesent bibendum eros ac nulla. Integer vel lacus ac neque viverra.
+Yii is a high-performance component-based PHP framework best for developing large-scale Web applications.
 		</p> 
  
 		<p> 
-			Vivamus euismod euismod sagittis. Etiam cursus neque non lectus mattis cursus et a libero. Vivamus condimentum hendrerit metus, a sollicitudin magna vulputate eu. Donec sed tincidunt lectus. Donec tellus lectus, fermentum sit amet porta non, rhoncus ac mi. Quisque placerat auctor justo, a egestas urna tincidunt eleifend.
-		</p> 
+Yii comes with a full stack of features, including MVC, DAO/ActiveRecord, I18N/L10N, caching, jQuery-based AJAX support, authentication and role-based access control, scaffolding, input validation, widgets, events, theming, Web services, and so on.
+		</p>
+		<p>
+			<a href="http://yiiframework.com" target="_blank">Click here</a> for more info on Yii Framework.
+		</p>
+
 	</div> 
- 
+
 	<!-- third slide --> 
 	<div> 
-		<h3>Third pane</h3> 
+		<h3>Drupal</h3> 
+ 
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/drupalicon.png" alt="Drupal" title="Drupal" style="float:left;margin:0 30px 20px 0" width="150px" /> 
  
 		<p style="font-weight:bold"> 
-			Non lectus lacinia egestas. Nulla hendrerit, felis quis elementum viverra, purus felis egestas magna.
+Drupal is a free and open source content management system (CMS) written in PHP and distributed under the GNU General Public License.
 		</p> 
  
 		<p> 
-			Aenean elit lorem, pretium vitae dictum in, fermentum consequat dolor. Proin consectetur sollicitudin tellus, non elementum turpis pharetra non. Sed quis tellus quam.
-		</p> 
+			It is used as a back-end system for at least 1% of all websites worldwide ranging from personal blogs to larger corporate and political sites including <a href="http://whitehouse.gov" target="_blank">whitehouse.gov</a> and <a href="http://data.gov.uk" target="_blank">data.gov.uk</a>. It is also used for knowledge management and business collaboration.
+		</p>
+		<p>
+			<a href="http://drupal.org" target="_blank">Click here</a> for more info on Drupal.
+		</p>
+
 	</div> 
  
 </div> 
