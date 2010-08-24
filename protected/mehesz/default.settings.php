@@ -39,3 +39,8 @@
 	 *
 	 */
 	defined( 'MEHESZ_CACHE_FOLDER' ) or define( 'MEHESZ_CACHE_FOLDER', '/path/to/cache/folder' );
+
+    /**
+     *
+     */
+	defined( 'MEHESZ_YII_DEBUG' ) or define( 'MEHESZ_YII_DEBUG', 'true or false' );
