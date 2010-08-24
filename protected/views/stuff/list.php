@@ -20,7 +20,7 @@ $this->menu=array(
 <?php foreach ($stuffs as $data) : ?> 
 		<div class="stuff-wrapper" style="min-height:200px;max-weight:200px;overflow:hidden;width:330px;border: 1px solid #ddd;float:left;margin:0px 0px 5px 5px;">
 			<div class="stuff-image" style="float:left;font-weight:bolder;min-height:150px;min-width:200px;">
-				<?php if( $data->image ) : ?>
+				<?php if( file_exists( MEHESZ_FILES_FOLDER . $data->image ) ) : ?>
 					<a href="javascript:void(0);"><img src="<?php echo Yii::app()->image->createUrl( '200x150', MEHESZ_FILES_FOLDER . $data->image ); ?>" rel="#photo_<?php echo $data->id; ?>" border="0" /></a>
 				<?php else: ?>
 					<img src="<?php echo Yii::app()->request->baseUrl?>/images/nophoto.jpg" />
@@ -38,9 +38,15 @@ $this->menu=array(
 			</div>
 			<div style="clear:both;"></div>
 		</div>
-		<div class="apple_overlay" id="photo_<?php echo $data->id;?>">
-			<img src="<?php echo Yii::app()->image->createUrl( '500x350', MEHESZ_FILES_FOLDER . $data->image ); ?>" rel="#photo_<?php echo $data->id; ?>" />
-		</div>
+		<?php if( file_exists( MEHESZ_FILES_FOLDER . $data->image ) ) : ?>
+		    <div class="apple_overlay" id="photo_<?php echo $data->id;?>">
+			    <img src="<?php echo Yii::app()->image->createUrl( '500x350', MEHESZ_FILES_FOLDER . $data->image ); ?>" rel="#photo_<?php echo $data->id; ?>" />
+    		</div>
+        <?php else: ?>
+            <div class="apple_overlay" id="photo_<?php echo $data->id;?>">
+				<img src="<?php echo Yii::app()->request->baseUrl?>/images/nophoto.jpg" rel="#photo_<?php echo $data->id;?>"/>
+            </div>
+        <?php endif; ?>
 <?php endforeach; ?>
 </div>
 
