@@ -44,7 +44,7 @@
         </h1>
 	    <?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/page', 'view' => 'home' )),
+				array('label'=>'Home', 'url'=> '/'),//array('/site/page', 'view' => 'home' )),
 				array('label'=>'Blog', 'url'=> 'http://mehesznet.blogspot.com' ),
 				array('label'=>'Stuff', 'url'=>array('/stuff/index')),
 				array('label'=>'Podcast', 'url'=> 'http://yiiradiio.mehesz.net'),

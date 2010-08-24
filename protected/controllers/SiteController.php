@@ -46,6 +46,11 @@ class SiteController extends Controller
 	    }
 	}
 
+    public function actionHome()
+    {
+        $this->render('application.views.site.pages.home');
+    }
+
 	/**
 	 * Displays the contact page
 	 */
