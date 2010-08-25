@@ -25,7 +25,7 @@
 	<div> 
 		<h3>Agile Develpment</h3> 
  
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/agile.jpg" alt="Flying screens" style="float:left;margin:0 30px 20px 0" width="150px" /> 
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/GoAgile.jpg" alt="Flying screens" style="float:left;margin:0 30px 20px 0" width="150px" /> 
  
 		<p style="font-weight:bold"> 
 			Agile software development is a group of software development methodologies based on iterative and incremental development, where requirements and solutions evolve through collaboration between self-organizing, cross-functional teams.
