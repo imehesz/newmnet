@@ -23,7 +23,7 @@
  
 	<!-- first slide --> 
 	<div> 
-		<h3>Agile Develpment</h3> 
+		<h3>Agile Development</h3> 
  
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/GoAgile.jpg" alt="Flying screens" style="float:left;margin:0 30px 20px 0" width="150px" /> 
  
@@ -83,7 +83,12 @@ Drupal is a free and open source content management system (CMS) written in PHP 
 	<a href="#"></a> 
 	<a href="#"></a> 
 </div> 
- 
+
+<div style="width:100%;padding:30px 0 0 20px;">
+    <h3>Happenings:</h3>
+    <a href="http://barcamptampabay.org/" target="_blank"><img border="0" src="<?php Yii::app()->request->baseUrl;?>/images/barcamp-tampa-bay.jpg" title="Barcamp Tampa Bay 2010" /></a>
+</div>
+
 <script language="JavaScript"> 
 // What is $(document).ready ? See: http://flowplayer.org/tools/documentation/basics.html#document_ready
 $(function() {
