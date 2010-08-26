@@ -11,6 +11,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Create Stuff', 'url'=>array('create')),
 	array('label'=>'Manage Stuff', 'url'=>array('admin')),
+	array('label'=>'Logout', 'url'=>array( $this->createUrl( 'site/logout' ) ) ),
 );
 ?>
 

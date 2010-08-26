@@ -66,6 +66,15 @@
 			<ul>
                 <?php $this->widget( 'ext.facewidget.facewidget' ); ?>
                 <?php $this->widget( 'ext.newsblockwidget' ); ?>
+				<li>
+					<h4>LATEST GRAVATAR</h4>
+					<ul>
+						<li>
+	 						<?php $this->widget('ext.VGGravatarWidget.VGGravatarWidget', array( 'email' => 'imehesz@gmail.com', 'size' => 150, 'htmlOptions' => array( 'alt' => 'Imre Mehesz', 'title' => 'Imre Mehesz' ) ) ); ?>
+						
+						</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<div id="content" class="column-right">
@@ -73,7 +82,9 @@
 		</div>
 	</div>
 	<div style="width:960px;text-align:center;height:13px;"><a href="#top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/top.jpg" border="0"/></a></div>
+</div>
 	<div id="footer" class="clear">
+		<div style="background-color:#f00;width:960px;margin:auto;">
 		<div class="footer-box">
 			<h4>Latest Shouts</h4>
 			<div id="dwitter_user"></div>
@@ -178,6 +189,7 @@
 			</form>
 			*/?>
 		</div>
+		</div>
 	</div>
 	
 	<div id="footer-links">
@@ -185,6 +197,6 @@
 			&copy; <?php echo date( 'Y', time() ); ?> <a href="http://mehesz.net" target="_blank">mehesz<span style='color:#f00;'>.</span>net</a>. Design by <a href="http://www.spyka.net" target="_blank">SyKa.net</a> 
 		</p>
 	</div>
-</div>
+
 </body>
 </html>

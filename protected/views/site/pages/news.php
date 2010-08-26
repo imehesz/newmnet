@@ -28,8 +28,8 @@ $this->breadcrumbs=array(
             if ( $title != '' ): ?>
                 <div style="float:right;font-style:italic;"><?php echo $feed->name; ?></div>
                 <div style="margin-bottom:10px;paddin-bottom:5px;border-bottom:3px solid #aaa;">
-                    <div style="font-size:22px;"><a href="<?php echo $url; ?>" target="_blank"><?php echo $title; ?></a></div>
-                    <div><?php echo $content; ?></div>
+                    <div style="font-size:22px;margin-bottom:10px;"><a href="<?php echo $url; ?>" target="_blank"><?php echo $title; ?></a></div>
+                    <div style="margin-bottom:10px;"><?php echo $content; ?></div>
                 </div>
             <?php endif;
         }

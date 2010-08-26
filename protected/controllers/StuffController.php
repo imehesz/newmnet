@@ -13,6 +13,15 @@ class StuffController extends Controller
 	 */
 	private $_model;
 
+	public function init()
+	{
+		if( Yii::app()->user->isGuest )
+		{
+			$this->layout = '//layouts/column1';
+		}
+		return parent::init();
+	}
+
 	/**
 	 * @return array action filters
 	 */

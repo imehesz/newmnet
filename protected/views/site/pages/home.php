@@ -39,7 +39,7 @@
  
 	<!-- second slide --> 
 	<div> 
-		<h3>Yii Framework</h3> 
+		<h3>Yii - a PHP Development Framework</h3> 
  
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/yii-logo.png" alt="Yii framework" title="Yii framework" style="float:left;margin:0 30px 20px 0" width="150px" /> 
  
@@ -58,7 +58,7 @@ Yii comes with a full stack of features, including MVC, DAO/ActiveRecord, I18N/L
 
 	<!-- third slide --> 
 	<div> 
-		<h3>Drupal</h3> 
+		<h3>Drupal - Content Management System</h3> 
  
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/drupalicon.png" alt="Drupal" title="Drupal" style="float:left;margin:0 30px 20px 0" width="150px" /> 
  
