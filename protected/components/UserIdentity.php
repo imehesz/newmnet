@@ -19,12 +19,13 @@ class UserIdentity extends CUserIdentity
 	{
 		$users=array(
 			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
+			//'demo'=>'demo',
+			//'admin'=>'admin',
+            'admin' => '43af1cb68eee9002c093316c2564d1ff',
 		);
 		if(!isset($users[$this->username]))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		else if($users[$this->username]!==$this->password)
+		else if($users[$this->username]!==md5($this->password))
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else
 			$this->errorCode=self::ERROR_NONE;
