@@ -154,9 +154,18 @@ class StuffController extends Controller
 		));
 	}*/
 
+	/**
+	 *
+	 */
 	public function actionIndex()
 	{
-		$stuffs = Stuff::model()->findAll();
+		$criteria 	= new CDbCriteria;
+		$sort 		= new CSort( 'Stuff' );
+		$sort->defaultOrder = 'weight';
+		$sort->applyOrder( $criteria );
+
+		$stuffs = Stuff::model()->findAll( $criteria );
+
 		$this->render('list',array(
 			'stuffs'=>$stuffs,
 		));
