@@ -1,0 +1,42 @@
+.stuff-wrapper
+{
+	min-height:200px;
+	max-weight:200px;
+	overflow:hidden;
+	width:330px;
+	border: 1px solid #ddd;
+	float:left;
+	margin:0px 0px 5px 5px;
+}
+
+.stuff-wrapper:hover
+{
+	background-color: #222;
+	color: #999;
+}
+
+.stuff-image
+{
+	float:left;
+	font-weight:bolder;
+	min-height:150px;
+	min-width:200px;
+}
+
+.stuff-description
+{
+	float:right;
+	margin:5px 5px 0px 0px;
+	width:120px;
+}
+
+.stuff-title
+{
+	font-weight:bolder;
+}
+
+.stuff-description-body
+{
+	font-size:10px;
+	margin-top:5px;
+}
