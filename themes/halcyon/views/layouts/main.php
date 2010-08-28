@@ -197,6 +197,13 @@
 			&copy; <?php echo date( 'Y', time() ); ?> <a href="http://mehesz.net" target="_blank">mehesz<span style='color:#f00;'>.</span>net</a>. Design by <a href="http://www.spyka.net" target="_blank">SyKa.net</a> 
 		</p>
 	</div>
-
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5417349-1");
+pageTracker._trackPageview();
+</script>
 </body>
 </html>
