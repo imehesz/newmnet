@@ -346,3 +346,22 @@ div#footer-links a {
 {
 	display:none;
 }
+
+div#twitter_user a
+{
+    background-color: red;
+    color: red !important;
+}
+
+div#dwitter_user ul li
+{
+    padding: 5px 0px;
+    line-height: 15px;
+}
+
+
+div#dwitter_user ul li a
+{
+    display:inline;
+}
+
