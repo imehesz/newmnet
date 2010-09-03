@@ -110,6 +110,7 @@ h3 {
 	color:#666666;
 	font-size:20px;
 	padding-bottom:10px;
+	text-shadow:2px 2px #bbb;
 }
 h4 {
 	padding-bottom:10px;
@@ -172,6 +173,7 @@ div#top ul li a {
 	font-size:12px;
 	font-weight:bold;
 	text-transform:uppercase;
+	text-shadow:1px 1px #777;
 }
 div#top ul li.selected a,
 div#top ul li.selected a:hover {
