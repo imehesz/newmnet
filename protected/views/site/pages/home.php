@@ -86,7 +86,7 @@ Drupal is a free and open source content management system (CMS) written in PHP 
 
 <div style="width:100%;padding:30px 0 0 20px;">
     <h3>Happenings:</h3>
-    <a href="http://barcamporlando.org" title="BarCamp Orlando - 04.02.2011" target="_blank"><img src="http://barcamporlando.org/images/content/barcamp_blog_badge.png"></a>
+	<?php $this->widget( 'ext.ReklamWidget', array( 'domain' => 'mehesz.net' ) ); ?>
 </div>
 
 <script language="JavaScript"> 
